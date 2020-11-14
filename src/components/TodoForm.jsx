@@ -12,6 +12,12 @@ const TodoForm = ({ addTodo, showAdd }) => {
       return;
     }
 
+    if (value.length > 40) {
+      alert("Jangan melebihi dari 40 karakter!");
+      setValue("");
+      return;
+    }
+
     addTodo(value);
     setValue("");
   };
