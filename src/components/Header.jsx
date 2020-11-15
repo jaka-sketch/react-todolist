@@ -7,7 +7,7 @@ const Header = ({ showAddToggle, showAdd, clearTodos }) => {
     <section className="header">
       <Button text={showAdd ? "Finish" : "Add"} onClick={showAddToggle} />
       <h1 className="header-title">Todo Lists</h1>
-      <Button text="Clear" onClick={clearTodos} color="red" />
+      <Button text="Clear" onClick={clearTodos} color="red" align="right" />
     </section>
   );
 };
