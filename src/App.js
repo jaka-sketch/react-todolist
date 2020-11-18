@@ -12,6 +12,7 @@ const theme = {
     }
   }
 };
+
 export default function App() {
   return (
     <Themeprovider theme={theme}>
