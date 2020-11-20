@@ -35,6 +35,6 @@ export const addBtn = ({ theme }) =>
     border: unset;
     outline: unset;
     & :active {
-      text-shadow: 1px, 1px, 2px ${theme.colo.primary.black};
+      text-shadow: 1px, 1px, 2px ${theme.color.primary.black};
     }
   `;
