@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import { Themeprovider } from "@emotion/react";
+import { ThemeProvider } from "@emotion/react";
 
 import TodoList from "./pages/TodoList";
 
@@ -20,8 +20,8 @@ const theme = {
 
 export default function App() {
   return (
-    <Themeprovider theme={theme}>
+    <ThemeProvider theme={theme}>
       <TodoList />
-    </Themeprovider>
+    </ThemeProvider>
   );
 }
