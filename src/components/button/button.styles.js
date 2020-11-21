@@ -28,6 +28,5 @@ export const button = ({ color, align, theme }) => {
     background: unset;
     border: unset;
     outline: unset;
-    text-align: ${align};
   `;
 };
