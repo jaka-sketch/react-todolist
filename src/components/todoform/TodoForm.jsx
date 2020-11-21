@@ -32,7 +32,7 @@ const TodoForm = ({ addTodo, showAdd }) => {
     setValue("");
   };
 
-  if (!showAdd) {
+  if (showAdd) {
     return (
       <section className="todo-form-component">
         <form onSubmit={handleFormSubmit}>
