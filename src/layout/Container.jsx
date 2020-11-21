@@ -1,26 +1,36 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 
-const Container = ({ children, flexDirection, flexWrap, justifyContent, alignItems, alignContent }) => {
+const Container = ({
+  children,
+  flexDirection,
+  flexWrap,
+  justifyContent,
+  alignItems,
+  alignContent
+}) => {
   const containerStyles = css`
-  display: flex;
-  flex-direction: ${flexDirection};
-  flex-wrap: ${flexWrap};
-  justify-content: ${justifyContent};
-  align-items: ${alignItems};
-  align-content: ${alignContent};
+    display: flex;
+    flex-direction: ${flexDirection};
+    flex-wrap: ${flexWrap};
+    justify-content: ${justifyContent};
+    align-items: ${alignItems};
+    align-content: ${alignContent};
   `;
-  return ( <div className="flex-container" css={containerStyles}>{children}</div>;
+  return (
+    <div className="flex-container" css={containerStyles}>
+      {children}
+    </div>
   );
 };
 
 Container.defaultProps = {
-  flexDirection: 'row',
-  flaxWrap: 'nowrap',
-  justifyContent: 'flex-start',
-  alignItems: 'stretch',
-  alignContent: 'stretch'
+  flexDirection: "row",
+  flaxWrap: "nowrap",
+  justifyContent: "flex-start",
+  alignItems: "stretch",
+  alignContent: "stretch"
 };
 
 Container.propTypes = {
@@ -28,17 +38,13 @@ Container.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]),
-  flexDirection : PropTypes.oneOf([
+  flexDirection: PropTypes.oneOf([
     "row",
     "row-reverse",
     "column",
     "column-reverse"
   ]),
-  flexWrap: PropTypes.oneOf([
-    "nowrap",
-    "wrap",
-    "wrap-reverse"
-  ]),
+  flexWrap: PropTypes.oneOf(["nowrap", "wrap", "wrap-reverse"]),
   justifyContent: PropTypes.oneOf([
     "flex-start",
     "flex-end",
@@ -78,8 +84,6 @@ Container.propTypes = {
     "first-baseline",
     "last-baseline"
   ])
-}
-
-
+};
 
 export default Container;
